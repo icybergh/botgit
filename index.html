@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <script>
+            know = {
+                "hello" : "hi",
+                "where are you located" : "new abiream",
+                "how are you?" : "good",
+                "show me Rockson" : "'_'",
+                "ok" : ":)",
+                "what is your name" : "My name is Jew Juslin",
+                "Jew" : "Hello friend, am at your serves",
+                "Who is your best friend" : "OOOH,You are my best friend",
+                "who is Akofo Addo" : "your father",
+                "how old are you" : "my age is undefined",
+                "fuck you" : "why so much anger",
+                "who is the ower" : "Oppong Asare Peter",
+                "who made you" : "Ofori Richard Rockson",
+                "Hi" : "Hello,how may i help you please",
+            };
+            function talk() {
+                var user = document.getElementById("userBox").value;
+                document.getElementById("userBox").value = "";
+                document.getElementById("chatLog").innerHTML += user+"<br>";
+                if (user in know) {
+                    document.getElementById("chatLog").innerHTML += know[user]+"<br>";
+                } else {
+                    document.getElementById("chatLog").innerHTML += "I don't understand...PLEASE CALL:+233543929694<br>";
+                }
+            } 
+        </script>
+    </head>
+    <body background="images/download-2.jpeg
+">
+        <p id="chatLog">- - C H A T - -<br></p>
+        <p id="chatLog">HELLO, WELCOME TO <u><b>K.OPPONG COLLECTIONS</b></u><br></p>
+        <input id="userBox" type="text" onkeydown="if (event.keyCode == 13) {talk()}">
+    </body>
+</html>
